@@ -11,6 +11,9 @@ process.argv[1] = path.resolve(process.argv[1]);
 
 var client = new net.Socket();
 
+console.log(process.argv[1]);
+
+
 client.connect(config.server.port, function () {
     client.write(fs.readFileSync(process.argv[1]));
 });

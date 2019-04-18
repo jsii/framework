@@ -19,6 +19,7 @@ const zzz = new cochilo({ app, router });
 
 const dev = createServer(socket => {
     socket.on("data", source => {
+        console.log("DATA INN");
         socket.write(JSON.stringify(zzz.transpiler(source)));
     });
 });
