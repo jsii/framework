@@ -1,0 +1,67 @@
+{
+    "name": "@cochilo/framework",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "COTE_LOG=0 COTE_HELLO_LOGS_ENABLED=0 nodemon --exec node -r @babel/register server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "babel": {
+        "presets": [
+            "@babel/env",
+            "@babel/react"
+        ],
+        "plugins": [
+            [
+                "@babel/plugin-proposal-class-properties"
+            ],
+            [
+                "@babel/plugin-syntax-dynamic-import"
+            ],
+            [
+                "@babel/plugin-transform-runtime",
+                {
+                    "regenerator": true
+                }
+            ]
+        ]
+    },
+    "dependencies": {
+        "@koa/cors": "2",
+        "bytenode": "^1.1.0",
+        "cote": "^0.20.0",
+        "couchdb-tools": "^0.0.6",
+        "express": "3.3.4",
+        "koa": "^2.7.0",
+        "koa-bodyparser": "^4.2.1",
+        "koa-router": "^7.4.0",
+        "kue": "^0.11.6",
+        "kue-ui-express": "^1.1.1",
+        "mysql": "^2.16.0",
+        "nano": "^8.0.1",
+        "nanoid": "^2.0.1",
+        "node-git-server": "^0.6.0",
+        "npmi": "^4.0.0",
+        "socket.io": "^2.2.0",
+        "uuid4": "^1.1.4"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.4.3",
+        "@babel/core": "^7.4.3",
+        "@babel/plugin-proposal-class-properties": "^7.4.0",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "@babel/plugin-transform-runtime": "^7.4.3",
+        "@babel/preset-env": "^7.4.3",
+        "@babel/preset-react": "^7.0.0",
+        "@babel/register": "^7.4.0",
+        "@babel/runtime": "^7.4.3",
+        "@elastic/elasticsearch": "^7.0.0-rc.1",
+        "babel-jest": "^24.7.1",
+        "jest": "^24.7.1",
+        "mock-couch": "^0.1.11",
+        "nodemon": "^1.18.11"
+    }
+}
