@@ -45,6 +45,8 @@ export class cochilo {
 
             let route = mod.functions[fn].manifest.router.GET;
 
+            console.log(route);
+
             var r = this.router.routes();
 
             let stack = r.router.stack;
