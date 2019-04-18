@@ -23,8 +23,19 @@ services:
   #       aliases:
   #         - elasticsearch
   
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    networks:
+      cochilo:
+        aliases:
+          - redis
+
   node:
     image: node
+    working_dir: /var/www/app
+    command: yarn start
     volumes:
       - ".:/var/www/app"
     ports:

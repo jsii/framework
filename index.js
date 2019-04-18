@@ -4,7 +4,7 @@ import { gateway, server, transpile } from "./config";
 const vm = require("vm");
 var cote = require("cote");
 const util = require("util");
-const nano = require("nano")("http://localhost:5984");
+const nano = require("nano")("http://couchdb:5984");
 
 var uuid4 = require("uuid4");
 
