@@ -18,6 +18,7 @@ const server = _createServer(app.callback());
 const zzz = new cochilo({ app, router });
 
 const dev = createServer(socket => {
+    console.log("dev server on!");
     socket.on("data", source => {
         console.log("DATA INN");
         socket.write(JSON.stringify(zzz.transpiler(source)));
